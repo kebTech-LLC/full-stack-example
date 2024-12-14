@@ -6,7 +6,7 @@ SERVER_ID=1
 SERVER_PORT=5050
 
 # Optional: Directory for serving static files (e.g., client-side app)
-CLIENT_DIR=./client_build
+CLIENT_DIR=../client/dist
 
 # Local development
 LOCAL_IP=127.0.0.1
