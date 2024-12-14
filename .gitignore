@@ -1,0 +1,18 @@
+# Node.js frontend build and dependency files
+client/node_modules/
+client/dist/
+
+# Rust backend build files
+server/target/
+
+# Environment variables
+server/.env
+
+# System-specific files
+.DS_Store
+Thumbs.db
+
+# Editor-specific files
+*.swp
+.idea/
+.vscode/

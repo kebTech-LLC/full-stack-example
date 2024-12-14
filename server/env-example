@@ -1,0 +1,35 @@
+# JWT secret used for authentication
+JWT_SECRET=your_super_secret_jwt_key
+
+# Server configurations
+SERVER_ID=1
+SERVER_PORT=5050
+
+# Optional: Directory for serving static files (e.g., client-side app)
+CLIENT_DIR=./client_build
+
+# Local development
+LOCAL_IP=127.0.0.1
+
+# CORS settings (comma-separated)
+ALLOWED_ORIGINS=http://localhost:3000,https://example.com
+
+# Database configurations
+DB_HOST=localhost
+DB_PORT=5432
+DB_USER=your_database_user
+DB_PASSWORD=your_secure_password
+DB_NAME=your_database_name
+
+# Authentication database (if separate from the main DB)
+AUTH_DB_HOST=localhost
+AUTH_DB_PORT=5432
+AUTH_DB_USER=your_auth_db_user
+AUTH_DB_PASSWORD=your_auth_db_password
+AUTH_DB_NAME=your_auth_database_name
+
+# Redis (Optional for WebSocket sessions or caching)
+REDIS_URL=redis://127.0.0.1:6379
+
+# Environment (development, staging, production)
+ENVIRONMENT=development
