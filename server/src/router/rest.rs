@@ -35,7 +35,7 @@ impl RestRouterFunction for RestRouter {
 }
 
 async fn route(method: HttpMethod, path: String, data: Value, auth_token: Option<String>, client_id: Option<String>, ip_address: Option<String>) -> Result<SuccessResponse, ErrorResponse> {
-    let (resource, operation) = parse_path(&path);
+    let (resource, operation) = CnctdServer::path_to_resource_and_operation(&path);
     println!(
         "Routing request...method: {:?}, path: {}, resource: {}, operation: {:?}, data: {:?}",
         method, path, resource, operation, !data.is_null()
@@ -85,9 +85,4 @@ impl Resource {
     }
 }
 
-fn parse_path(path: &str) -> (String, Option<String>) {
-    let parts: Vec<&str> = path.trim_start_matches('/').split('/').collect();
-    let resource = parts.get(0).unwrap_or(&"").to_string();
-    let operation = parts.get(1).map(|s| s.to_string());
-    (resource, operation)
-}
+
